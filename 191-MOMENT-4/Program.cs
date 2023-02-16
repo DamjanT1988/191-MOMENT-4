@@ -14,6 +14,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<SongLibraryContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultDbString")));
 
+builder.Services.AddDbContext<AlbumLibraryContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultDbString")));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
